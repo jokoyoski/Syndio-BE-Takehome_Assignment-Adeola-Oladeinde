@@ -3,6 +3,8 @@ package database
 import (
 	"database/sql"
 	"log"
+	"syndio-backend-app/config"
+
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -10,7 +12,7 @@ var DB *sql.DB
 
 func InitDB() {
 	var err error
-	DB, err = sql.Open("sqlite3", "./employees.db")
+	DB, err = sql.Open("sqlite3", config.GetSqLDb())
 	if err != nil {
 		log.Fatalf("Error connecting to database: %v", err)
 	}

@@ -30,7 +30,7 @@ syndio-backend-app/
 
    ```bash
    git clone https://github.com/jokoyoski/Syndio-BE-Takehome_Assignment-Adeola-Oladeinde
-   cd syndio-backend-app
+   cd Syndio-BE-Takehome_Assignment-Adeola-Oladeinde
    ```
 
 2. **Install Go dependencies**:
@@ -42,10 +42,12 @@ syndio-backend-app/
 3. **Set up the database**:  
    Ensure that `employees.db` is present in the project root. This database should contain the `employees` table with employee data as per the initial requirement.
 
-4. **Configure the PORT** (optional):  
-   By default, the API listens on port `8080`. Create a `.env` file with the following variable:
+4. **Configure the Env** 
+   Ensure you have the environment variable set up by creating a .env file for the variables.
+   Create a `.env` file with the following variable:
    ```
    PORT=9000
+   SQL_DB=./employees.db
    ```
 
 ## Running the Server
@@ -133,7 +135,7 @@ This endpoint allows you to save job data associated with employees in the datab
 ## Troubleshooting
 
 - **Error Connecting to Database**: Ensure `employees.db` exists in the project directory and is accessible.
-- **Invalid Payload**: Confirm that the request payload is in the expected format as shown above.
+- **Invalid Payload**: Confirm that the request payload is in the expected format as shown above. -**Environment variable issue** 2024/11/02 06:28:06 Error loading .env file: Ensure you have a valid .env in the main directory
 
 ## Notes
 

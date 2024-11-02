@@ -12,3 +12,11 @@ func GetPort() string {
 	}
 	return ":" + port
 }
+
+func GetSqLDb() string {
+	db := os.Getenv("SQL_DB")
+	if db == "" {
+		db = "" 
+	}
+	return db
+}
